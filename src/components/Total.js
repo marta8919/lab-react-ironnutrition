@@ -6,8 +6,8 @@ class Total extends Component {
     render() {
         const {items} = this.props
 
-        let total = 0
-        let totalCalories = 0
+        let total = items.reduce(function(total, singleItem){return total+singleItem.calories * singleItem.quantity}, 0);
+
 
         return (
             <div>
